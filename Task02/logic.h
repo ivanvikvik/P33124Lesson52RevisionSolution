@@ -1,1 +1,1 @@
-int sum_elements(int* array, int size);
+﻿int sum_elements(int* array, int size);

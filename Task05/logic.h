@@ -1,1 +1,1 @@
-int count_zero_elements(double* array, int size);
+﻿int get_last_local_maxima(int* array, int size);

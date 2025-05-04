@@ -1,21 +1,4 @@
-#include "test.h"
-
-string convert(int* array, int size) {
-	string s = "";
-
-	for (int i = 0; i < size; i++)
-	{
-		s += to_string(*(array + i)) + " ";
-	}
-	return s;
-}
-
-void print_test(int* array, int size, int expected, string name) {
-	int actual = sum_elements(array, size);
-
-	string msg = actual == expected ? "PASS" : "FAIL";
-	cout << name << " --> " << msg << endl;
-}
+﻿#include "test.h"
 
 // Negative tests
 void test01() {
@@ -23,7 +6,6 @@ void test01() {
 	int size = 0;
 	int expected = 0;
 	print_test(array, size, expected, "test01");
-	delete[] array;
 }
 
 void test02() {
@@ -31,7 +13,6 @@ void test02() {
 	int size = -5;
 	int expected = 0;
 	print_test(array, size, expected, "test02");
-	delete[] array;
 }
 
 void test03() {
@@ -39,7 +20,6 @@ void test03() {
 	int size = 5;
 	int expected = 0;
 	print_test(array, size, expected, "test03");
-	delete[] array;
 }
 
 void test04() {
@@ -113,6 +93,7 @@ void test11() {
 	int* array = new int[size] { 0, 2, 3, 0, 5, 6, 0, 8, 9, 0};
 	int expected = 33;
 	print_test(array, size, expected, "test11");
+	delete[] array;
 }
 
 void test12() {
@@ -120,6 +101,7 @@ void test12() {
 	int* array = new int[size] { 1, 0, 3, 0, 5, 0, 7};
 	int expected = 8;
 	print_test(array, size, expected, "test12");
+	delete[] array;
 }
 
 void test13() {
@@ -127,6 +109,7 @@ void test13() {
 	int* array = new int[size] { 0, 2, 0, 4, 0, 6};
 	int expected = 6;
 	print_test(array, size, expected, "test13");
+	delete[] array;
 }
 
 void test14() {
@@ -134,4 +117,5 @@ void test14() {
 	int* array = new int[size] { 1, 0, 2, 0, 4, 0};
 	int expected = 6;
 	print_test(array, size, expected, "test14");
+	delete[] array;
 }

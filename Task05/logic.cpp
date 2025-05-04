@@ -1,22 +1,14 @@
+﻿// [The Last local maxima]
+// Последний локальных максимум
+//
+// Дан вектор целочисленных значений. Необходимо разработать
+// функцию(или программу), которая находит значение последнего
+// локального максимума вектора. Если вектор не содержит локальных
+// максимумов или вектор задан некорректно, то функция(программа)
+// должна возвратить ноль.
+
 #include "logic.h"
 
-int count_zero_elements(double* array, int size) {
-	if (size <= 0 || array == nullptr) {
-		return -1;
-	}
-
-	int count = 0;
-
-	for (int i = 0; i < size; i++)
-	{
-		if (*(array + i) == 0) {
-			count++;
-		}
-
-		/*if (array[i] == 0) {
-			count++;
-		}*/
-	}
-
-	return count;
+int get_last_local_maxima(int* array, int size) {
+	return -1;
 }

@@ -1,29 +1,16 @@
-#include  "logic.h"
-#include <cmath>
-int zero_elements(int* array, int size) {
-	int count = 0;
+﻿// [The Sum of elements]
+// Сумма элементов
+//
+// Дан вектор целочисленных значений. Необходимо разработать
+// функцию(или программу), которая вычисляет сумму элементов
+// вектора, расположенных между первым и последним нулевыми
+// элементами. Если вектор содержит только один нулевой элемент
+// или не содержит вообще нулевых элементов, а также, если
+// вектор задан некорректно, то функция(программа) должна
+// возвратить ноль.
 
-	for (int i = 0; i < size; i++)
-	{
-		if (array[i] == 0) {
-			count++;
-		}
-	}
-
-	return count;
-}
+#include "logic.h"
 
 int sum_elements(int* array, int size) {
-
-	int sum = 0;
-
-	int index = zero_elements(array, size);
-
-	for (int i = index + 1; i < index; i++)
-	{
-		sum += abs(array[i]);
-	}
-
-	return sum;
-
+	return -1;
 }

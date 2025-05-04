@@ -1,21 +1,4 @@
-#include "test.h"
-
-string convert(double* array, int size) {
-	string s = "";
-
-	for (int i = 0; i < size; i++)
-	{
-		s += to_string(*(array + i)) + " ";
-	}
-	return s;
-}
-
-void print_test(double* array, int size, int expected, string name) {
-	int actual = count_zero_elements(array, size);
-
-	string msg = actual == expected ? "PASS" : "FAIL";
-	cout << name << " --> " << msg << endl;
-}
+﻿#include "test.h"
 
 // Negative tests
 void test01() {
@@ -23,7 +6,6 @@ void test01() {
 	int size = 0;
 	int expected = -1;
 	print_test(array, size, expected, "test01");
-	delete[] array;
 }
 
 void test02() {
@@ -31,7 +13,6 @@ void test02() {
 	int size = -5;
 	int expected = -1;
 	print_test(array, size, expected, "test02");
-	delete[] array;
 }
 
 void test03() {
@@ -39,7 +20,6 @@ void test03() {
 	int size = 5;
 	int expected = -1;
 	print_test(array, size, expected, "test03");
-	delete[] array;
 }
 
 // Boundet tests
@@ -98,6 +78,7 @@ void test10() {
 	double* array = new double[size] { 0.0, 1.2, 2.3};
 	int expected = 1;
 	print_test(array, size, expected, "test10");
+	delete[] array;
 }
 
 void test11() {
@@ -105,6 +86,7 @@ void test11() {
 	double* array = new double[size] { 1.2, 0.0, 2.3};
 	int expected = 1;
 	print_test(array, size, expected, "test11");
+	delete[] array;
 }
 
 void test12() {
@@ -112,4 +94,5 @@ void test12() {
 	double* array = new double[size] { 1.2, 2.3, 0.0};
 	int expected = 1;
 	print_test(array, size, expected, "test12");
+	delete[] array;
 }

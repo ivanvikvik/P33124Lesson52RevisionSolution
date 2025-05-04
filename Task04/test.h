@@ -1,7 +1,4 @@
-#include "logic.h"
-#include <iostream>
-#include <string>
-using namespace std;
+﻿#include "util.h"
 
 void test01();
 void test02();
@@ -13,5 +10,3 @@ void test07();
 void test08();
 void test09();
 void test10();
-void test11();
-void test12();
